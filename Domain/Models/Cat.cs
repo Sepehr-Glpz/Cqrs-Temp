@@ -22,6 +22,21 @@ public class Cat : BaseEntity
 
     public Result UpdateCat(UpdateCat updateCat)
     {
+        Result finalRes = Result.CreateSuccessful();
+        if(updateCat is { CatBreed: not null } model)
+        {
+            var (_, _, breed) = model;
+            if(breed!.Value == CatBreed.Undefined)
+            {
+                _ = finalRes.Failed().WithValidation(Validation.FromApplicationError("Breed Cannot be undefined!"));
+            }
+            else
+            {
+                this.CatBreed = breed!.Value;
+            }
+        }
+
+
 
     }
 }
