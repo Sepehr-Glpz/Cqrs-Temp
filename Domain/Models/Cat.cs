@@ -23,10 +23,10 @@ public class Cat : BaseEntity
     public Result UpdateCat(UpdateCat updateCat)
     {
         Result finalRes = Result.CreateSuccessful();
-        if(updateCat is { CatBreed: not null } model)
+        if (updateCat is { CatBreed: not null } breedUpdate)
         {
-            var (_, _, breed) = model;
-            if(breed!.Value == CatBreed.Undefined)
+            var (_, _, breed) = breedUpdate;
+            if (breed!.Value == CatBreed.Undefined)
             {
                 _ = finalRes.Failed().WithValidation(Validation.FromApplicationError("Breed Cannot be undefined!"));
             }
@@ -35,9 +35,31 @@ public class Cat : BaseEntity
                 this.CatBreed = breed!.Value;
             }
         }
-
-
-
+        if (updateCat is { Description: not null } decUpdate)
+        {
+            var (_, description, _) = decUpdate;
+            if (string.IsNullOrWhiteSpace(description))
+            {
+                _ = finalRes.Failed().WithValidation(Validation.FromApplicationError("Description cannot be empty"));
+            }
+            else
+            {
+                this.Description = description;
+            }
+        }
+        if (updateCat is { Name: not null } nameUpdate)
+        {
+            var (name, _, _) = nameUpdate;
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                _ = finalRes.Failed().WithValidation(Validation.FromApplicationError("Name cannot be empty!"));
+            }
+            else
+            {
+                this.Name = name;
+            }
+        }
+        return finalRes;
     }
 }
 
