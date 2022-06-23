@@ -48,7 +48,7 @@ public class Result : object
         return this;
     }
 
-    public static Result CreateSuccesful()
+    public static Result CreateSuccessful()
     {
         return new Result().Successful();
     }
