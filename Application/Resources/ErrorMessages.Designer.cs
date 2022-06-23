@@ -59,5 +59,32 @@ namespace SGSX.CqrsTemp.Application.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The {PropertyName} value is invalid!.
+        /// </summary>
+        internal static string FVFieldInvalid {
+            get {
+                return ResourceManager.GetString("FVFieldInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The {PropertyName} Length must be between {MinLength} and {MaxLength}!.
+        /// </summary>
+        internal static string FVFieldLengthInvalid {
+            get {
+                return ResourceManager.GetString("FVFieldLengthInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The {PropertyName} is Required!.
+        /// </summary>
+        internal static string FVFieldRequired {
+            get {
+                return ResourceManager.GetString("FVFieldRequired", resourceCulture);
+            }
+        }
     }
 }

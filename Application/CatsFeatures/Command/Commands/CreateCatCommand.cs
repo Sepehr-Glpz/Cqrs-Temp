@@ -1,4 +1,5 @@
-﻿using SGSX.CqrsTemp.Domain.Enums;
+﻿using SGSX.CqrsTemp.Application.Common.Command;
+using SGSX.CqrsTemp.Domain.Enums;
 
 namespace SGSX.CqrsTemp.Application.CatsFeatures.Command.Commands;
 public class CreateCatCommand : ICommand
