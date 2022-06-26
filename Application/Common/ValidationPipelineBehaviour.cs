@@ -33,8 +33,7 @@ public class ValidationPipelineBehaviour<TRequest, TResponse> : IPipelineBehavio
             return await next();
         }
 
-        var responseConstructor = typeof(TResponse).GetConstructor(System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance, Type.EmptyTypes);
-        var response = responseConstructor?.Invoke(Array.Empty<object>()) as Result;
+        var response = Activator.CreateInstance(typeof(TResponse), true) as Result;
         return (response!.Failed().WithValidation(validation.Errors.Select(s => Validation.FromApplicationError(s.ErrorMessage))) as TResponse)!;
     }
 }
