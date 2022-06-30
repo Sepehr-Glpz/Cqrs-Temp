@@ -5,7 +5,7 @@ public class MetaResult<T> : Result<T>
     {
     }
 
-    public Dictionary<string, object>? _meta;
+    private Dictionary<string, object>? _meta;
     public IReadOnlyDictionary<string, object>? MetaData { get => _meta; }
 
     public virtual MetaResult<T> WithMeta(string key, object? value)

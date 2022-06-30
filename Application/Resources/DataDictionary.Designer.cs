@@ -22,7 +22,7 @@ namespace SGSX.CqrsTemp.Application.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class DataDictionary {
+    public class DataDictionary {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace SGSX.CqrsTemp.Application.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SGSX.CqrsTemp.Application.Resources.DataDictionary", typeof(DataDictionary).Assembly);
@@ -51,7 +51,7 @@ namespace SGSX.CqrsTemp.Application.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace SGSX.CqrsTemp.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cat Breed.
         /// </summary>
-        internal static string CatBreed {
+        public static string CatBreed {
             get {
                 return ResourceManager.GetString("CatBreed", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace SGSX.CqrsTemp.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
-        internal static string Description {
+        public static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace SGSX.CqrsTemp.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
-        internal static string Name {
+        public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
             }

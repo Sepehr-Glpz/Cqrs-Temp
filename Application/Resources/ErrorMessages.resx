@@ -126,4 +126,7 @@
   <data name="FVFieldRequired" xml:space="preserve">
     <value>The {PropertyName} is Required!</value>
   </data>
+  <data name="RecordNotFound" xml:space="preserve">
+    <value>No such record exists!</value>
+  </data>
 </root>

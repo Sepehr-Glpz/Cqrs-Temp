@@ -38,11 +38,11 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Resources\DataDictionary.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DataDictionary.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\ErrorMessages.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

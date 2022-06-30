@@ -4,14 +4,29 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyName>SGSX.CrsTemp.$(MSBuildProjectName)</AssemblyName>
+    <AssemblyName>SGSX.CqrsTemp.$(MSBuildProjectName)</AssemblyName>
     <RootNamespace>$(AssemblyName)</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <Using Include="System; System.Text;"/>
-    <Using Include="System.Collections.Generic; System.Linq;"/>
-    <Using Include="System.Threading.Tasks;"/>
+    <Using Include="System; System.Text;" />
+    <Using Include="System.Collections.Generic; System.Linq;" />
+    <Using Include="System.Threading.Tasks;" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Cats\Command\" />
+    <Folder Include="Cats\Query\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6" />
+    <PackageReference Include="MongoDB.Driver" Version="2.16.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
   
 </Project>

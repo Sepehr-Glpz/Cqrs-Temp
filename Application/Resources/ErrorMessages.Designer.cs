@@ -22,7 +22,7 @@ namespace SGSX.CqrsTemp.Application.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ErrorMessages {
+    public class ErrorMessages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace SGSX.CqrsTemp.Application.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SGSX.CqrsTemp.Application.Resources.ErrorMessages", typeof(ErrorMessages).Assembly);
@@ -51,7 +51,7 @@ namespace SGSX.CqrsTemp.Application.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace SGSX.CqrsTemp.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The {PropertyName} value is invalid!.
         /// </summary>
-        internal static string FVFieldInvalid {
+        public static string FVFieldInvalid {
             get {
                 return ResourceManager.GetString("FVFieldInvalid", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace SGSX.CqrsTemp.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The {PropertyName} Length must be between {MinLength} and {MaxLength}!.
         /// </summary>
-        internal static string FVFieldLengthInvalid {
+        public static string FVFieldLengthInvalid {
             get {
                 return ResourceManager.GetString("FVFieldLengthInvalid", resourceCulture);
             }
@@ -81,9 +81,18 @@ namespace SGSX.CqrsTemp.Application.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The {PropertyName} is Required!.
         /// </summary>
-        internal static string FVFieldRequired {
+        public static string FVFieldRequired {
             get {
                 return ResourceManager.GetString("FVFieldRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No such record exists!.
+        /// </summary>
+        public static string RecordNotFound {
+            get {
+                return ResourceManager.GetString("RecordNotFound", resourceCulture);
             }
         }
     }
