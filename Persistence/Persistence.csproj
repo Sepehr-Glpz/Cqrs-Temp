@@ -17,6 +17,7 @@
   <ItemGroup>
     <Folder Include="Cats\Command\" />
     <Folder Include="Cats\Query\" />
+    <Folder Include="Cats\" />
   </ItemGroup>
 
   <ItemGroup>
