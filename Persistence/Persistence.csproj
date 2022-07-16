@@ -15,12 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Cats\Command\" />
-    <Folder Include="Cats\Query\" />
-    <Folder Include="Cats\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6" />
     <PackageReference Include="MongoDB.Driver" Version="2.16.1" />
   </ItemGroup>

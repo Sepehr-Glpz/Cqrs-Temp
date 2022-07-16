@@ -73,5 +73,7 @@ public class Result : object
     {
         return Success.ToString().ToLower();
     }
+
+    public static readonly Result BasicSuccess = new Result().Successful();
 }
 
