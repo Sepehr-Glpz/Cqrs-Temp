@@ -54,5 +54,47 @@ internal class CatsCommandRepository : EFCommandRepositoryBase<Cat>, ICatsComman
             return MetaResult<Cat>.CreateSuccessful().WithValue(cat);
         }
     }
+
+    public MetaResult<Cat> GetFullByIdAsNoTracking(Guid id)
+    {
+        try
+        {
+            var cat = DbSet
+                .Where(c => c.Id == id)
+                .Include(inc => inc.MouseBuddy)
+                .AsNoTracking()
+                .FirstOrDefault();
+            if(cat is default(Cat))
+            {
+                return MetaResult<Cat>.CreateFailed().WithValidation(Validation.FromApplicationError("Failed to fetch record!"));
+            }
+            return MetaResult<Cat>.CreateSuccessful(cat);
+        }
+        catch(Exception ex)
+        {
+            return MetaResult<Cat>.CreateFailed().WithValidation(ex);
+        }
+    }
+
+    public async Task<MetaResult<Cat>> GetFullByIdAsNoTrackingAsync(Guid id)
+    {
+        try
+        {
+            var cat = await DbSet
+                .Where(c => c.Id == id)
+                .Include(inc => inc.MouseBuddy)
+                .AsNoTracking()
+                .FirstOrDefaultAsync();
+            if (cat is default(Cat))
+            {
+                return MetaResult<Cat>.CreateFailed().WithValidation(Validation.FromApplicationError("Failed to fetch record!"));
+            }
+            return MetaResult<Cat>.CreateSuccessful(cat);
+        }
+        catch (Exception ex)
+        {
+            return MetaResult<Cat>.CreateFailed().WithValidation(ex);
+        }
+    }
 }
 

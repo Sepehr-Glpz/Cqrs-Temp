@@ -8,5 +8,8 @@ public interface ICatsCommandRepository : ICommandRepository<Cat>
 {
     MetaResult<Cat> GetCatByName(string name);
     Task<MetaResult<Cat>> GetCatByNameAsync(string name);
+
+    MetaResult<Cat> GetFullByIdAsNoTracking(Guid id);
+    Task<MetaResult<Cat>> GetFullByIdAsNoTrackingAsync(Guid id);
 }
 

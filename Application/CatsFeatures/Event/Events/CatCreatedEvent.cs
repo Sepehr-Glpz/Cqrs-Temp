@@ -8,6 +8,6 @@ public class CatCreatedEvent : INotification
     {
     }
 
-    public Cat? Payload { get; init; }
+    public Guid Payload { get; init; }
 }
 

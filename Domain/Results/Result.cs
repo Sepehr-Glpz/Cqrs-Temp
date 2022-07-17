@@ -75,5 +75,20 @@ public class Result : object
     }
 
     public static readonly Result BasicSuccess = new Result().Successful();
+
+    public virtual Result<T> ToResult<T>()
+    {
+        var result = Result<T>.CreateSuccessful().WithValidation(ValidationMessages);
+        if(Success)
+        {
+            result.Successful();
+        }
+        else
+        {
+            result.Failed();
+        }
+        return result;
+    }
+
 }
 

@@ -13,5 +13,8 @@ public class CreateCatCommand : ICommand
     public string? Description { get; init; }
 
     public CatBreed CatBreed { get; init; }
+
+    public void Deconstruct(out string? name, out string? description, out CatBreed catBreed) =>
+        (name, description, catBreed) = (Name, Description, CatBreed);
 }
 

@@ -12,10 +12,4 @@
     <ProjectReference Include="..\Persistence\Persistence.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="CatsFeatures\Command\" />
-    <Folder Include="CatsFeatures\Event\" />
-    <Folder Include="CatsFeatures\Query\" />
-  </ItemGroup>
-
 </Project>
