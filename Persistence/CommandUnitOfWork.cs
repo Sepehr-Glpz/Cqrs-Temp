@@ -8,7 +8,7 @@ namespace SGSX.CqrsTemp.Persistence;
 internal class CommandUnitOfWork : UnitOfWork, ICommandUnitOfWork
 {
     protected ILoggerFactory LoggerProvider { get; }
-    internal CommandUnitOfWork(DbContext dbContext, ILoggerFactory loggerProvider) : base(dbContext)
+    internal CommandUnitOfWork(CommandDatabaseContext dbContext, ILoggerFactory loggerProvider) : base(dbContext)
     {
         LoggerProvider = loggerProvider;
     }

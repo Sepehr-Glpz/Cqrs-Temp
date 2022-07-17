@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 namespace SGSX.CqrsTemp.Persistence.Cats.Command;
 internal class CatsCommandRepository : EFCommandRepositoryBase<Cat>, ICatsCommandRepository
 {
-    internal CatsCommandRepository(DbContext dbContext, ILogger<CatsCommandRepository> logger) : base(dbContext, logger)
+    internal CatsCommandRepository(CommandDatabaseContext dbContext, ILogger<CatsCommandRepository> logger) : base(dbContext, logger)
     {
     }
 

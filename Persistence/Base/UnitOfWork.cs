@@ -4,8 +4,8 @@ using Microsoft.EntityFrameworkCore;
 namespace SGSX.CqrsTemp.Persistence.Base;
 internal class UnitOfWork : IUnitOfWork
 {
-    protected DbContext? DatabaseContext { get; private set; }
-    internal UnitOfWork(DbContext dbContext) : base() =>
+    protected CommandDatabaseContext? DatabaseContext { get; private set; }
+    internal UnitOfWork(CommandDatabaseContext dbContext) : base() =>
         (DatabaseContext, IsDisposed) = (dbContext, false);
 
     public bool IsDisposed { get; private set; }
