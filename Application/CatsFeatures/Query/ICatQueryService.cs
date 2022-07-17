@@ -5,5 +5,6 @@ namespace SGSX.CqrsTemp.Application.CatsFeatures.Query;
 public interface ICatQueryService
 {
     MetaResult<CatBasicInfo> GetCatBasicInfoById(Guid id);
+    Task<MetaResult<CatBasicInfo>> GetCatBasicInfoByIdAsync(Guid id);
 }
 
