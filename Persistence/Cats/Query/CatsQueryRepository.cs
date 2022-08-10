@@ -9,7 +9,7 @@ using SGSX.CqrsTemp.Persistence.Base;
 namespace SGSX.CqrsTemp.Persistence.Cats.Query;
 internal class CatsQueryRepository : MongoQueryRepositoryBase<Cat>, ICatsQueryRepository
 {
-    public CatsQueryRepository(IMongoClient mongoClient, ILogger<MongoQueryRepositoryBase<Cat>> logger, MongoRepositoryConfig repoConfig) : base(mongoClient, logger, repoConfig)
+    public CatsQueryRepository(IMongoClient mongoClient, ILogger<CatsQueryRepository> logger, MongoRepositoryConfig repoConfig) : base(mongoClient, logger, repoConfig)
     {
     }
 
